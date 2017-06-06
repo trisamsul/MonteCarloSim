@@ -111,27 +111,27 @@
 								<tr>
 									<td>Masukan jumlah simulasi</td>
 									<td>:</td>
-									<td><input type="number" class="form-control" name="jmlRandom"></td>
+									<td><input type="number" class="form-control" name="jmlRandom" required="" oninvalid="this.setCustomValidity('Harap di isi !')" oninput="setCustomValidity('')"></td>
 								</tr>
 								<tr>
 									<td>Masukan X0</td>
 									<td>:</td>
-									<td><input type="number" class="form-control" name="x0"></td>
+									<td><input type="number" class="form-control" name="x0" required="" oninvalid="this.setCustomValidity('Harap di isi !')" oninput="setCustomValidity('')"></td>
 								</tr>
 								<tr>
 									<td>Masukan a</td>
 									<td>:</td>
-									<td><input type="number" class="form-control" name="a"></td>
+									<td><input type="number" class="form-control" name="a" required="" oninvalid="this.setCustomValidity('Harap di isi !')" oninput="setCustomValidity('')"></td>
 								</tr>
 								<tr>
 									<td>Masukan c</td>
 									<td>:</td>
-									<td><input type="number" class="form-control" name="c"></td>
+									<td><input type="number" class="form-control" name="c" required="" oninvalid="this.setCustomValidity('Harap di isi !')" oninput="setCustomValidity('')"></td>
 								</tr>
 								<tr>
 									<td>Masukan m</td>
 									<td>:</td>
-									<td><input type="number" class="form-control" name="m"></td>
+									<td><input type="number" class="form-control" name="m" required="" oninvalid="this.setCustomValidity('Harap di isi !')" oninput="setCustomValidity('')"></td>
 								</tr>
 									<input type="hidden" value="<?php echo $pangkat; ?>" name="pangkat">
 									<input type="hidden" value="<?php echo $amount; ?>" name="amount">
