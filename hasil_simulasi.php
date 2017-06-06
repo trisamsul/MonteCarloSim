@@ -95,6 +95,7 @@
 						$average = $total / $jmlRandom;
 					?>
 					<h4><center>Rata-rata jumlah permintaan: <b><?php echo $average; ?></b></center></h4>
+					<center><a href="prediksi_permintaan.php">Kembali Ke Awal</a></center>
 				  </div>
 				</div>
 			</div>

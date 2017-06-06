@@ -60,7 +60,7 @@
 										<tr>
 											<td>Masukan jumlah data</td>
 											<td>:</td>
-											<td><input type="number" name="jumlah" class="form-control" required="" oninvalid="this.setCustomValidity('Harap di isi !')" oninput="setCustomValidity('')"></td>
+											<td><input type="number" min="0" name="jumlah" class="form-control" required="" oninvalid="this.setCustomValidity('Harap di isi !')" oninput="setCustomValidity('')"></td>
 											<div class="input-group-btn">
 											<td><input type="submit" value="Ok" class="btn btn-success"></td>
       										</div>
@@ -82,8 +82,8 @@
 												  <tr>
 											<?php for($i=0; $i<$banyak; $i++): ?>
 												  <tr>
-													  <td><input type=text name=demand[] placeholder="0" class="form-control" required="" oninvalid="this.setCustomValidity('Harap di isi !')" oninput="setCustomValidity('')"></td>
-													  <td><input type=number name=freq[] placeholder="0" class="form-control" required="" oninvalid="this.setCustomValidity('Harap di isi !')" oninput="setCustomValidity('')"></td>
+													  <td><input type=number min=0 name=demand[] placeholder="0" class="form-control" required="" oninvalid="this.setCustomValidity('Harap di isi !')" oninput="setCustomValidity('')"></td>
+													  <td><input type=number min=1 name=freq[] placeholder="0" class="form-control" required="" oninvalid="this.setCustomValidity('Harap di isi !')" oninput="setCustomValidity('')"></td>
 												  </tr>
 											<?php endfor; ?>
 										  </table>
