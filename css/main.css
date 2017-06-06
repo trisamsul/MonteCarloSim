@@ -1,0 +1,11 @@
+.custom-table-header th{
+	background-color: #337ab7;
+	border-color: #337ab7;
+	color: #fff;
+	font-weight: normal;
+	padding-left: 10px;
+}
+
+.custom-padding-table td{
+	padding:5px;
+}
