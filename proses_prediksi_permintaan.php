@@ -23,6 +23,9 @@
 				$demand = $_POST['demand'];
 				$freq = $_POST['freq'];
 				$total = 0;
+				$biaya = $_POST['biaya'];
+				$penjualan = $_POST['penjualan'];
+				$banyak = $_POST['banyak'];
 				$probability[-1] = 0;
 				$amount = count($freq);
 				$botInterval = [];
@@ -109,7 +112,7 @@
 						<form action="hasil_simulasi.php" method="post">
 							<table class="custom-padding-table">
 								<tr>
-									<td>Masukan jumlah simulasi</td>
+									<td>Masukan jumlah simulasi <?php echo $banyak; ?></td>
 									<td>:</td>
 									<td><input type="number" min="1" class="form-control" name="jmlRandom" required="" oninvalid="this.setCustomValidity('Harap di isi !')" oninput="setCustomValidity('')"></td>
 								</tr>
@@ -122,6 +125,8 @@
 									<td>Masukan a</td>
 									<td>:</td>
 									<td><input type="number" min="1" class="form-control" name="a" required="" oninvalid="this.setCustomValidity('Harap di isi !')" oninput="setCustomValidity('')"></td>
+									<td width="350px"></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>Masukan c</td>
@@ -134,12 +139,18 @@
 									<td><input type="number" min="1" class="form-control" name="m" required="" oninvalid="this.setCustomValidity('Harap di isi !')" oninput="setCustomValidity('')"></td>
 								</tr>
 									<input type="hidden" value="<?php echo $pangkat; ?>" name="pangkat">
+									<input type="hidden" value="<?php echo $biaya; ?>" name="biaya">
+									<input type="hidden" value="<?php echo $penjualan; ?>" name="penjualan">
+									<input type="hidden" value="<?php echo $banyak; ?>" name="banyak">
 									<input type="hidden" value="<?php echo $amount; ?>" name="amount">
 									<input type="hidden" value="<?php echo $lowestInterval; ?>" name="lowestInterval">
 									<input type="hidden" value="<?php echo print base64_encode(serialize($demand)); ?>" name="demand">
 									<input type="hidden" value="<?php print base64_encode(serialize($botInterval)); ?>" name="botInterval">
 									<input type="hidden" value="<?php print base64_encode(serialize($topInterval)); ?>" name="topInterval">
-									<td><input type="submit" class="btn btn-success" value="Run" style="padding-left: 30px; padding-right: 30px;"></td>
+									<tr>
+										<td colspan="2" align="center"><input type="submit" class="btn btn-success" value="Run" style="padding-left: 30px; padding-right: 30px;"></td>
+									</tr>
+									
 							</table>
 						</form>
 					</div>

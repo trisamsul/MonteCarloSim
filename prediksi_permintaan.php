@@ -87,7 +87,18 @@
 												  </tr>
 											<?php endfor; ?>
 										  </table>
+										  <table class="table table-hover custom-table-header">
+												  <tr>
+													<th>Biaya Produksi / Unit</th>
+													<th>Harga Penjualan / Unit</th>
+												  <tr>
+												  <tr>
+													  <td><input type=number min=1 name="biaya" placeholder="0" class="form-control" required="" oninvalid="this.setCustomValidity('Harap di isi !')" oninput="setCustomValidity('')"></td>
+													  <td><input type=number min=1 name="penjualan" placeholder="0" class="form-control" required="" oninvalid="this.setCustomValidity('Harap di isi !')" oninput="setCustomValidity('')"></td>
+												  </tr>
+										  </table>
 										  <div class="input-group-btn">
+											<input type="hidden" name="jumlah" value="<?php echo $banyak; ?>">
 											<center><input type="submit" value="Hitung" name="submit" class="btn btn-success" style="padding-left: 30px; padding-right: 30px;"></center>
 										  </div>
 										</div>
